@@ -7,14 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInit44391ae3f0a64a105716867c1a7bfd40
 {
     public static $prefixLengthsPsr4 = array (
-        'A' => 
+        's' => 
         array (
-            'ArianBotine\\AppCarrinhoCompras\\' => 31,
+            'src\\' => 4,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'ArianBotine\\AppCarrinhoCompras\\' => 
+        'src\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
@@ -22,6 +22,7 @@ class ComposerStaticInit44391ae3f0a64a105716867c1a7bfd40
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'src\\CarrinhoCompra' => __DIR__ . '/../..' . '/src/CarrinhoCompra.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
