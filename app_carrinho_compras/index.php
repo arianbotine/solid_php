@@ -18,3 +18,9 @@ $carrinho1->adicionarItem('Teclado', 150.99);
 
 echo "</br>";
 print_r($carrinho1->exibirItens());
+
+echo "</br>";
+print_r($carrinho1->exibirValorTotal());
+
+echo "</br>";
+print_r($carrinho1->exibirValorTotal());
