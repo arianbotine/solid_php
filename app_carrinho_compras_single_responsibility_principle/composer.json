@@ -1,0 +1,16 @@
+{
+  "name": "arian.botine/app_carrinho_compras",
+  "type": "project",
+  "autoload": {
+    "psr-4": {
+      "src\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Arian",
+      "email": "arianbotine@hotmail.com.br"
+    }
+  ],
+  "require": {}
+}
