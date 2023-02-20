@@ -16,12 +16,12 @@ class CarrinhoCompra {
         return $this->itens;
     }
 
-    public function addItem(Item $item) {
+    public function adicionarItem(Item $item) {
         array_push($this->itens, $item);
         return true;
     }
 
-    public function validarCarrinho(Item $item) {
+    public function validarCarrinho() {
         return count($this->itens) > 0;
     }
 }
