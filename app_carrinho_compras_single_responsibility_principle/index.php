@@ -3,6 +3,7 @@
 require __DIR__ . "/vendor/autoload.php";
 
 use src\CarrinhoCompra;
+use src\EmailService;
 use src\Item;
 use src\Pedido;
 
@@ -44,7 +45,7 @@ echo '</pre>';
 //------------------------------------------
 echo '<h4>Valor do pedido</h4>';
 $total = 0;
-foreach($pedido->getCarrinhoCompra()->getItens() as $key => $item){
+foreach ($pedido->getCarrinhoCompra()->getItens() as $key => $item) {
     $total += $item->getValor();
 }
 echo $total;
@@ -55,3 +56,12 @@ echo $pedido->getCarrinhoCompra()->validarCarrinho();
 echo '<h4>Status do pedido</h4>';
 echo $pedido->getStatus();
 //------------------------------------------
+$pedido->confirmar();
+//------------------------------------------
+echo '<h4>Status do pedido</h4>';
+echo $pedido->getStatus();
+//------------------------------------------
+echo '<h4>E-mail </h4>';
+if ($pedido->getStatus() == 'confirmado') {
+    echo EmailService::enviaEmail();
+}
