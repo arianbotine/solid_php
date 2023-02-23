@@ -12,5 +12,7 @@
       "email": "arianbotine@hotmail.com.br"
     }
   ],
-  "require": {}
+  "require-dev": {
+    "phpunit/phpunit": "^5.2"
+  }
 }
