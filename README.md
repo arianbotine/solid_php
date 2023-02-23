@@ -6,4 +6,4 @@ baixar phpunit
 
 php ..\composer.phar require --dev --prefer-dist phpunit/phpunit
 
-\*\* --prefer-dist baixa as dependencias do phpunit
+--prefer-dist baixa as dependencias do phpunit
