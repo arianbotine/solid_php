@@ -4,24 +4,32 @@ namespace src;
 
 use src\Item;
 
-class CarrinhoCompra {
+class CarrinhoCompra
+{
 
     private $itens;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->itens = [];
     }
 
-    public function getItens() {
+    public function getItens()
+    {
         return $this->itens;
     }
 
-    public function adicionarItem(Item $item) {
-        array_push($this->itens, $item);
-        return true;
+    public function adicionarItem(Item $item)
+    {
+        if ($item->itemValido()) {
+            array_push($this->itens, $item);
+            return true;
+        }
+        return false;
     }
 
-    public function validarCarrinho() {
+    public function validarCarrinho()
+    {
         return count($this->itens) > 0;
     }
 }
