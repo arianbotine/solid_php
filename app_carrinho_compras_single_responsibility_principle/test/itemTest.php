@@ -27,11 +27,10 @@ class ItemTest extends TestCase {
         $this->assertEquals($valor, $item->getValor());
     }
 
-    public function testItemValido() {
-        $descricao = 'Item teste';
-        $valor = 15.55;
-
-
+    /**
+     * @dataProvider dataItemValido
+     */
+    public function testItemValido($descricao, $valor) {
         $item = new Item();
         $item->setValor($valor);
         $item->setDescricao($descricao);
@@ -42,9 +41,11 @@ class ItemTest extends TestCase {
         $this->assertFalse($item->itemValido());
     }
 
-    public function testItemInvalidoQuandoValorMenorOuIgualAZero() {
+    /**
+     * @dataProvider dataValoresInvalidos
+     */
+    public function testItemInvalidoQuandoValorMenorOuIgualAZero($valor) {
         $descricao = 'Item teste';
-        $valor = -15.55;
 
         $item = new Item();
         $item->setValor($valor);
@@ -73,5 +74,13 @@ class ItemTest extends TestCase {
         $item->setValor($valor);
         $item->setDescricao($descricao);
         $this->assertFalse($item->itemValido());
+    }
+
+    public static function dataValoresInvalidos() {
+        return [[0], [-10]];
+    }
+
+    public static function dataItemValido() {
+        return [['Item teste 1', 10], ['ipadsipdasijdasojdhadfshgfuodhfouadhf', 10.54], ['a', 99999999.10], ['14', 1]];
     }
 }
