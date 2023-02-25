@@ -4,11 +4,21 @@ use src\Leitor;
 
 require __DIR__ . "/vendor/autoload.php";
 
-$leitor = new Leitor();
+//------------------ TXT
+$leitorTXT = new Leitor();
+$leitorTXT->setDiretorio(__DIR__.'/arquivos');
+$leitorTXT->setArquivo('dados.txt');
+$arrayTXT = $leitorTXT->lerArquivo();
 
-$leitor->setDiretorio(__DIR__.'/arquivos');
-$leitor->setArquivo('dados.csv');
+//------------------ CSV
+
+$leitorCSV = new Leitor();
+$leitorCSV->setDiretorio(__DIR__.'/arquivos');
+$leitorCSV->setArquivo('dados.csv');
+$arrayCSV = $leitorCSV->lerArquivo();
+
+//------------------ Merge entre TXT e CSV
 
 echo '<pre>';
-print_r($leitor->lerArquivo());
+print_r(array_merge($arrayTXT,$arrayCSV));
 echo '</pre>';
