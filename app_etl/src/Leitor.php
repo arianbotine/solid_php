@@ -28,10 +28,11 @@ class Leitor {
         return $this;
     }
 
-    public function lerArquivo() {
+    public function lerArquivo(): array {
         $caminho = $this->getDiretorio() . '/' . $this->getArquivo();
 
         $arquivo = new Arquivo();
         $arquivo->lerArquivoCSV($caminho);
+        return $arquivo->getDados();
     }
 }
