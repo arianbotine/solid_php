@@ -805,7 +805,7 @@ return array(
     'PHPUnit\\Util\\Test' => $vendorDir . '/phpunit/phpunit/src/Util/Test.php',
     'PHPUnit\\Util\\ThrowableToStringMapper' => $vendorDir . '/phpunit/phpunit/src/Util/ThrowableToStringMapper.php',
     'PHPUnit\\Util\\VersionComparisonOperator' => $vendorDir . '/phpunit/phpunit/src/Util/VersionComparisonOperator.php',
-    'PHPUnit\\Util\\Xml' => $vendorDir . '/phpunit/phpunit/src/Util/Xml.php',
+    'PHPUnit\\Util\\Xml' => $vendorDir . '/phpunit/phpunit/src/Util/XML.php',
     'PHPUnit\\Util\\Xml\\Exception' => $vendorDir . '/phpunit/phpunit/src/Util/Xml/Exception.php',
     'PHPUnit\\Util\\Xml\\FailedSchemaDetectionResult' => $vendorDir . '/phpunit/phpunit/src/Util/Xml/FailedSchemaDetectionResult.php',
     'PHPUnit\\Util\\Xml\\Loader' => $vendorDir . '/phpunit/phpunit/src/Util/Xml/Loader.php',

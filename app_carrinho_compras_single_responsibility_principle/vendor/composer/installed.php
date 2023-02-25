@@ -3,7 +3,7 @@
         'name' => 'arian.botine/app_carrinho_compras',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'b99a5d1c9d54325b4d1db75791e0b4659c3f2e6c',
+        'reference' => '0b4de798c178f571adb675d8ae7fe57e16973eeb',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'arian.botine/app_carrinho_compras' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'b99a5d1c9d54325b4d1db75791e0b4659c3f2e6c',
+            'reference' => '0b4de798c178f571adb675d8ae7fe57e16973eeb',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
