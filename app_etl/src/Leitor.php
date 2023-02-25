@@ -8,7 +8,7 @@ class Leitor {
 
     public function __construct() {
         $this->diretorio = '';
-        $this->arquivo = 0;
+        $this->arquivo = '';
     }
 
     public function getDiretorio(): string {
@@ -26,5 +26,12 @@ class Leitor {
     public function setArquivo(string $arquivo): self {
         $this->arquivo = $arquivo;
         return $this;
+    }
+
+    public function lerArquivo() {
+        $caminho = $this->getDiretorio() . '/' . $this->getArquivo();
+
+        $arquivo = new Arquivo();
+        $arquivo->lerArquivoCSV($caminho);
     }
 }

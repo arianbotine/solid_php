@@ -3,7 +3,7 @@
 use PHPUnit\Framework\TestCase;
 use src\Item;
 
-class ItemxTest extends TestCase {
+class ItemTest extends TestCase {
     public function testEstadoInicialItem() {
         $item = new Item();
 
