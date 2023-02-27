@@ -1,0 +1,16 @@
+{
+    "name": "arian/app_etl",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Arian Botine",
+            "email": "arian.botine@shift.com.br"
+        }
+    ],
+    "require": {}
+}
