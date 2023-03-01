@@ -1,9 +1,9 @@
 <?php
 
-namespace src;
+namespace src\poligonos;
 
-class Retangulo {
-    protected string $largura;
+class Quadrado {
+    protected float $largura;
     protected float $altura;
 
     public function __construct() {
@@ -11,22 +11,20 @@ class Retangulo {
         $this->altura = 0;
     }
 
-    public function getLargura() {
-        return $this->largura;
-    }
     public function setLargura(string $largura): void {
         $this->largura = $largura;
+        $this->altura = $largura;
+    }
+    public function setAltura(float $altura): void {
+        $this->largura = $altura;
+        $this->altura = $altura;
+    }
+
+    public function getLargura() {
+        return $this->largura;
     }
 
     public function getAltura() {
         return $this->altura;
-    }
-
-    public function setAltura(float $altura): void {
-        $this->altura = $altura;
-    }
-
-    public function getArea() {
-        return $this->altura * $this->largura;
     }
 }

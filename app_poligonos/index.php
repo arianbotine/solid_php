@@ -1,18 +1,21 @@
 <?php
 
-use src\Quadrado;
-use src\Retangulo;
+use src\Poligono;
+use src\poligonos\Quadrado;
+use src\poligonos\Retangulo;
 
 require __DIR__ . "/vendor/autoload.php";
 
-$retangulo = new Retangulo;
-$retangulo->setLargura(10);
-$retangulo->setAltura(4);
-echo "Área do retangulo " . $retangulo->getArea();
+$poligono = new Poligono();
+$poligono->setForma(new Retangulo());
+$poligono->getForma()->setLargura(10);
+$poligono->getForma()->setAltura(5);
+echo "Área do retangulo " . $poligono->getArea();
 
 echo "<br>";
 
-$quadrado = new Quadrado;
-$quadrado->setLargura(10);
-$quadrado->setAltura(4);
-echo "Área do quadrado " . $quadrado->getArea();
+$poligono = new Poligono();
+$poligono->setForma(new Quadrado());
+$poligono->getForma()->setLargura(10);
+$poligono->getForma()->setAltura(5);
+echo "Área do quadrado " . $poligono->getArea();
