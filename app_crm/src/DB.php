@@ -3,5 +3,8 @@
 namespace src;
 
 class DB {
-    protected string $conexao;
+    private string $conexao;
+
+    protected function conectar() {
+    }
 }

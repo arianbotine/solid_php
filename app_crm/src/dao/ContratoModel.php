@@ -2,7 +2,19 @@
 
 namespace src\dao;
 
+use src\componentes\Log;
+use src\componentes\Notificacao;
 use src\DB;
+use src\interfaces\InterfaceCadastro;
 
-class ContratoModel extends DB {
+class ContratoModel extends DB implements InterfaceCadastro {
+
+    public function salvar() {
+    }
+
+    public function registrarLog(Log $log) {
+    }
+
+    public function enviarNotificacao(Notificacao $notificacao) {
+    }
 }
