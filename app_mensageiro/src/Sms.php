@@ -4,8 +4,8 @@ namespace src;
 
 use src\interfaces\InterfaceMensagem;
 
-class Email implements InterfaceMensagem {
+class Sms implements InterfaceMensagem {
     public function enviar(): void {
-        echo 'E-mail: Seu token é 9999';
+        echo 'Sms: Seu token é 9999';
     }
 }
