@@ -1,5 +1,8 @@
 <?php
 
+use src\Mensageiro;
+
 require __DIR__ . "/vendor/autoload.php";
 
-echo 'Funcionando';
+$msg = new Mensageiro();
+$msg->enviarToken();
