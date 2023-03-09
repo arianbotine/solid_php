@@ -2,18 +2,22 @@
 
 namespace src;
 
+use src\interfaces\InterfaceMensagem;
+
 class Mensageiro {
     private $classe;
+
+    public function __construct(InterfaceMensagem $classe) {
+        $this->setClasse($classe);
+    }
     public function getClasse() {
         return $this->classe;
     }
-    public function setClasse(string $classe) {
+    public function setClasse(InterfaceMensagem $classe) {
         $this->classe = $classe;
         return $this;
     }
     public function enviarToken(): void {
-        $classe = "\src\\" . ucfirst($this->classe);
-        $obj = new $classe();
-        $obj->enviar();
+        $this->getClasse()->enviar();
     }
 }
